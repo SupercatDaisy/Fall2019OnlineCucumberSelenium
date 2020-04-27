@@ -12,6 +12,62 @@
         <maven.compiler.target>13</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
+
+<profiles>
+    <profile>
+        <id>Smoke</id>
+        <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <configuration>
+                    <!-- Parallel Testing of 2 different runners with 2 browsers at a time-->
+                    <!-- Parallel Testing of feature files with unlimited browsers at a time-->
+                    <!--   <parallel>classes</parallel>-->
+                      <parallel>methods</parallel>
+                      <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <!--  <threadCount>2</threadCount>
+                      <perCoreThreadCount>false</perCoreThreadCount>
+                      <forkCount>2C</forkCount>-->
+                      <includes>
+                          <!--<include>**/CucumberRunner.java</include>-->
+                        <include>**/SmokeTestRunner.java</include>
+                    </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <!-- to re run failed test auto but for test passed first time report will not keep history so its not very good-->
+                    <rerunFailingTestsCount>1</rerunFailingTestsCount>
+                </configuration>
+            </plugin>
+        </plugins>
+        </build>
+    </profile>
+</profiles>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <build>
         <plugins>
             <plugin>
@@ -70,6 +126,7 @@
             </plugin>
         </plugins>
     </build>
+
 
 <dependencies>
 

@@ -34,7 +34,7 @@ public class LoginStepDefinitions {
 
     @Then("user should verify that title is a Dashboard")
     public void user_should_verify_that_title_is_a_Dashboard() {
-        Assert.assertEquals("Dashboard", Driver.getDriver(ConfigurationReader.getProperty("browser")).getTitle());
+        Assert.assertEquals("Dashboar", Driver.getDriver(ConfigurationReader.getProperty("browser")).getTitle());
     }
 
     @When("user logs in as a driver")

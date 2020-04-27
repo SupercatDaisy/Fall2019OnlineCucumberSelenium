@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class DateTimeUtilities {
+public class DateTimeUtilities  {
     public static String getCurrentDate(String format) {
         return LocalDate.now().format(DateTimeFormatter.ofPattern(format));
     }

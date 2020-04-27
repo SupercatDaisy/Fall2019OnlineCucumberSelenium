@@ -8,9 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "com/vytrack/step_definitions",
         features = "@target/rerun.txt",  //change it to txt created by failing test
-     //   dryRun = false,  no need also
         strict = false,
-    //    tags = "@deneme", //tags not needed here
         plugin= {
                 "html:target/failed-default-report", // report will be seperate by adding failed
                 "json:target/failed_report.json",  // new profile not overriding original report
