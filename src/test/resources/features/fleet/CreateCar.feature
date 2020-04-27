@@ -1,6 +1,8 @@
+
 Feature: Create a Car
   As a user, I want to be able to create a Car
 
+  @Test23
   Scenario: Add new car
     Given user is on the login page
     When user logs in as a sales manager

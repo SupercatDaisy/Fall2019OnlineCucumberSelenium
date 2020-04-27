@@ -10,4 +10,4 @@ Feature: View all calendar events
     |10 |
     |25 |
     |50 |
-  #  |100|
+  # |100|

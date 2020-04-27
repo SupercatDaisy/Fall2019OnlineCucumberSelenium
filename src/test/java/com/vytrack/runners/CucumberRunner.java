@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         plugin= {
                 "html:target/default-report",
                 "json:target/cucumber1.json",
-                "rerun:target/rerun.txt"
+                "rerun:target/ilhan.txt"
         }
 )
 public class CucumberRunner {
